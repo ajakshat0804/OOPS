@@ -1,0 +1,24 @@
+//Write a program in C++ to find the bonus amount if given.
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+ float salary,bonus;
+ int grade;
+ 
+ cout<<"Enter salary of Employee=";
+ cin>>salary;
+ cout<<"Enter grade=";
+ cin>>grade;
+
+ if(grade>=17)
+   bonus = salary * 60.0/100.0;
+   else
+   bonus = salary * 30.0/100.0;
+ salary = salary + bonus;
+ cout<<"The Total salary of Employee = "<<salary;
+
+ return 0; 
+ }
