@@ -1,0 +1,47 @@
+//Write a program in C++ to print diamond paƩern.
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n, i, j, space;
+
+  cout << "Enter the number of rows: ";
+  cin >> n;
+
+  space = n - 1;
+
+  // loop to print upper triangle
+  for (i = 1; i <= n; i++) {
+    // loop to print spaces
+    for (j = 1; j <= space; j++) {
+      cout << " ";
+    }
+
+    // loop to print stars
+    for (j = 1; j <= 2 * i - 1; j++) {
+      cout << "*";
+    }
+
+    cout << endl;
+    space--;
+  }
+
+  // loop to print lower triangle
+  space = 1;
+  for (i = n - 1; i >= 1; i--) {
+    // loop to print spaces
+    for (j = 1; j <= space; j++) {
+      cout << " ";
+    }
+
+    // loop to print stars
+    for (j = 1; j <= 2 * i - 1; j++) {
+      cout << "*";
+    }
+
+    cout << endl;
+    space++;
+  }
+
+  return 0;
+}
